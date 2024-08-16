@@ -1,0 +1,285 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F9F9F9;
+}
+
+header {
+    /* background-color: #333333;
+    color: #FFFFFF; */
+    padding: 10px 0;
+    position: relative;
+    z-index: 2; /* Ensure header is on top */
+    width: 100%;
+    background-color: rgba(24, 23, 23, 0.649); /* Slightly transparent */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#logo img {
+    max-height: 50px;
+}
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#menu ul li {
+    position: relative;
+}
+
+#menu ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+}
+
+#menu ul li a:hover {
+    background-color: #6CACE4;
+    border-radius: 4px;
+}
+
+#header_search {
+    padding: 6px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#header_btns {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+#header_btns img {
+    max-height: 30px;
+    cursor: pointer;
+    filter: invert(100%);
+}
+
+.signIn_btn {
+    background-color: #6CACE4;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signIn_btn:hover {
+    background-color: #005B96;
+}
+
+/* Banner Slider Styles */
+/* Banner Slider Styles */
+#banner-slider {
+    position: relative;
+    top: -80px;
+    overflow: hidden;
+    width: 100%;
+    height: 780px; /* Adjust height as needed */
+    margin: auto;
+    /* z-index: 1;
+    top: -90px; */
+}
+
+#banner-slider .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 100%; /* Position off-screen initially */
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out, left 0.8s ease-in-out;
+}
+
+#banner-slider .slide img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+
+#banner-slider .slide.active {
+    left: 0;
+    opacity: 1;
+}
+
+#banner-slider .slide.prev {
+    left: -100%; /* Move out of view */
+    opacity: 0;
+}
+
+#banner-slider .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black shade with reduced opacity */
+    z-index: 1; /* Ensure overlay is above the image */
+}
+
+/* Navigation Buttons */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    z-index: 3; /* Ensure buttons are above the slider */
+}
+
+#prev-btn {
+    left: 20px;
+}
+
+#next-btn {
+    right: 20px;
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Ensure images cover the entire slider area */
+#banner-slider .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8; /* Reduce the opacity of the image */
+    z-index: 0; /* Keep image below overlay */
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Slightly darker background */
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 2; /* Ensure text is above overlay */
+}
+
+.banner-text h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.banner-text p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #ff4500; /* Button background color */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Button hover color */
+}
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #menu ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    #menu ul li a {
+        padding: 10px 20px;
+    }
+
+    #header_btns {
+        margin-top: 10px;
+    }
+
+    #banner-slider {
+        height: 730px;
+        top: -250px;
+    }
+
+    .banner-text {
+        top: 65%;
+    }
+
+    .nav-btn {
+        top: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    #menu ul li a {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    #menu ul li {
+        display: none;
+    }
+
+    .signIn_btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        background: blue;
+        border: none;
+        cursor: pointer;
+    }
+
+    #banner-slider {
+        height: 830px;
+    }
+
+}
