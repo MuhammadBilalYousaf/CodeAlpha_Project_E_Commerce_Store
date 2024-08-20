@@ -23,9 +23,10 @@
                     <li><a href="products.html">Products</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li>
-                        <form action="search_results.html" method="GET">
+                        <!-- <form action="search_results.html" method="GET"> -->
                             <input type="search" name="product_search" id="header_search" placeholder="Search products" aria-label="Search Products">
-                        </form>
+                            <div id="searchSuggestions" class="suggestions-box"></div> <!-- Suggestions will appear here -->
+                        <!-- </form> -->
                     </li>
                     <button class="menu-toggle"><i class="fa fa-bars"></i></button>
                 </ul>
@@ -50,7 +51,7 @@
             <div class="banner-text">
                 <h1>Shop the Latest Trends at Unbeatable Prices</h1>
                 <p>Your one-stop shop for everything fashion, electronics, and more.</p>
-                <a href="#shop-now" class="cta-button">Start Shopping</a>
+                <a href="products.html" class="cta-button">Start Shopping</a>
             </div>
         </div>
         <div class="slide">
@@ -59,7 +60,7 @@
             <div class="banner-text">
                 <h1>Exclusive Deals on Top Brands</h1>
                 <p>Discover discounts on your favorite products. Limited time only!</p>
-                <a href="#shop-now" class="cta-button">Shop Now</a>
+                <a href="products.html" class="cta-button">Shop Now</a>
             </div>
         </div>
         <div class="slide">
@@ -68,7 +69,7 @@
             <div class="banner-text">
                 <h1>Find Everything You Need, All in One Place</h1>
                 <p>Browse our categories to find the perfect items for you.</p>
-                <a href="#shop-now" class="cta-button">Browse Categories</a>
+                <a href="products.html" class="cta-button">Browse Categories</a>
             </div>
         </div>
         <!-- Navigation Buttons -->
@@ -76,7 +77,296 @@
         <button id="next-btn" class="nav-btn">&#10095;</button>
     </section>
     
-    
+
+
+    <!-- Featured Products Section -->
+<section id="featured_products">
+    <div class="heading">
+        <h2>Featured Products</h2>
+    </div>
+    <div class="products-grid">
+        <div class="product-card" data-name="laptop">
+            <img src="./images/laptop.png" alt="Product 1">
+            <h3>MacBook Pro</h3>
+            <p>$399.99</p>
+            <a href="#" class="cta-button">Add to Cart</a>
+        </div>
+        <div class="product-card">
+            <img src="./images/camera.png" alt="Product 2">
+            <h3>DSLR Camera</h3>
+            <p>$59.99</p>
+            <a href="#" class="cta-button">Add to Cart</a>
+        </div>
+        <div class="product-card">
+            <img src="./images/iphone.png" alt="Product 3">
+            <h3>Iphone 7 Plus</h3>
+            <p>$99.99</p>
+            <a href="#" class="cta-button">Add to Cart</a>
+        </div>
+        <div class="product-card">
+            <img src="./images/smart watch.png" alt="Product 1">
+            <h3>Smart Watch</h3>
+            <p>$49.99</p>
+            <a href="#" class="cta-button">Add to Cart</a>
+        </div>
+        <div class="product-card">
+            <img src="./images/speaker.png" alt="Product 2">
+            <h3>JBL Portable Speaker</h3>
+            <p>$59.99</p>
+            <a href="#" class="cta-button">Add to Cart</a>
+        </div>
+        <div class="product-card">
+            <img src="./images/earpods.png" alt="Product 3">
+            <h3>Earpods</h3>
+            <p>$34.99</p>
+            <a href="#" class="cta-button">Add to Cart</a>
+        </div>
+        <div class="product-card">
+            <img src="./images/headphone.png" alt="Product 2">
+            <h3>Headphone</h3>
+            <p>$34.99</p>
+            <a href="#" class="cta-button">Add to Cart</a>
+        </div>
+        <div class="product-card">
+            <img src="./images/sports shoes.png" alt="Product 3">
+            <h3>Sports Shoes</h3>
+            <p>$109.99</p>
+            <a href="#" class="cta-button">Add to Cart</a>
+        </div>
+        <!-- Add more product cards as needed -->
+    </div>
+    <a href="products.html" class="cta-button center_btn">See More</a>
+</section>
+
+
+<section class="our-vision">
+    <div class="vision-content">
+        <div class="heading">
+        <h2>Our Vision</h2>
+    </div>
+        <p class="vision-statement">
+            To revolutionize the yacht rental experience, making luxury accessible, and unforgettable moments a guarantee.
+        </p>
+        <div class="vision-points">
+            <div class="vision-point">
+                <h3>Innovation</h3>
+                <p>Continuously embracing new technologies and trends to enhance the customer experience.</p>
+            </div>
+            <div class="vision-point">
+                <h3>Excellence</h3>
+                <p>Commitment to delivering unmatched quality and service in everything we do.</p>
+            </div>
+            <div class="vision-point">
+                <h3>Sustainability</h3>
+                <p>Promoting environmentally responsible practices in all aspects of our operations.</p>
+            </div>
+            <div class="vision-point">
+                <h3>Customer Focus</h3>
+                <p>Prioritizing customer satisfaction through personalized experiences and dedicated support.</p>
+            </div>
+        </div>
+        <a href="#our-mission" class="cta-button">Learn More About Our Mission</a>
+    </div>
+</section>
+
+
+<section class="customer-feedback">
+    <div class="feedback-header">
+        <div class="heading">
+        <h2>What Our Customers Say</h2>
+    </div>
+        <p>Discover the <span>Experiences of Our Satisfied Clients</span></p>
+    </div>
+    <div class="feedback-content">
+        <div class="feedback-counter">
+            <span id="happy-clients" class="counter">0</span><span>+</span>
+            <p>HAPPY CLIENTS</p>
+        </div>
+        <div class="feedback-slider">
+            <div class="feedback-item">
+                <p class="customer-quote">"Shopping at [Your E-commerce Store Name] was a fantastic experience! The variety of products, excellent customer service, and fast shipping exceeded my expectations. I highly recommend them for all your shopping needs!"</p>
+                <div class="customer-info">
+                    <div class="customer-rating">
+                        <span>★★★★★</span>
+                    </div>
+                    <img src="images/review 1.jpg" alt="Carlos Martinelli" class="customer-photo">
+                    <h3 class="customer-name">CARLOS MARTINELLI</h3>
+                    <p class="customer-title">Businessman</p>
+                </div>
+            </div>
+            <div class="feedback-item">
+                <p class="customer-quote">"I found exactly what I was looking for at [Your E-commerce Store Name]. The product quality was top-notch, and the prices were unbeatable. Plus, their customer support was super helpful. I'll definitely be a returning customer!"</p>
+                <div class="customer-info">
+                    <div class="customer-rating">
+                        <span>★★★★★</span>
+                    </div>
+                    <img src="images/review 2.jpg" alt="Eduard Mendy" class="customer-photo">
+                    <h3 class="customer-name">EDUARD MENDY</h3>
+                    <p class="customer-title">vloger</p>
+                </div>
+            </div>
+            <div class="feedback-item">
+                <p class="customer-quote">"This is my go-to online store for all my shopping needs. From the user-friendly website to the hassle-free checkout process, [Your E-commerce Store Name] makes online shopping a breeze. Plus, the deals and discounts are amazing!"</p>
+                <div class="customer-info">
+                    <div class="customer-rating">
+                        <span>★★★★★</span>
+                    </div>
+                    <img src="images/review 3.jpg" alt="Taro & Sakura, Osaka" class="customer-photo">
+                    <h3 class="customer-name">Taro & Sakura, Osaka</h3>
+                </div>
+            </div>
+            <div class="feedback-item">
+                <p class="customer-quote">"Shopping at [Your E-commerce Store Name] was a fantastic experience! The variety of products, excellent customer service, and fast shipping exceeded my expectations. I highly recommend them for all your shopping needs!"</p>
+                <div class="customer-info">
+                    <div class="customer-rating">
+                        <span>★★★★★</span>
+                    </div>
+                    <img src="images/review 1.jpg" alt="Carlos Martinelli" class="customer-photo">
+                    <h3 class="customer-name">CARLOS MARTINELLI</h3>
+                    <p class="customer-title">Businessman</p>
+                </div>
+            </div>
+            <div class="feedback-item">
+                <p class="customer-quote">"I found exactly what I was looking for at [Your E-commerce Store Name]. The product quality was top-notch, and the prices were unbeatable. Plus, their customer support was super helpful. I'll definitely be a returning customer!"</p>
+                <div class="customer-info">
+                    <div class="customer-rating">
+                        <span>★★★★★</span>
+                    </div>
+                    <img src="images/review 2.jpg" alt="Eduard Mendy" class="customer-photo">
+                    <h3 class="customer-name">EDUARD MENDY</h3>
+                    <p class="customer-title">vloger</p>
+                </div>
+            </div>
+            <div class="feedback-item">
+                <p class="customer-quote">"This is my go-to online store for all my shopping needs. From the user-friendly website to the hassle-free checkout process, [Your E-commerce Store Name] makes online shopping a breeze. Plus, the deals and discounts are amazing!"</p>
+                <div class="customer-info">
+                    <div class="customer-rating">
+                        <span>★★★★★</span>
+                    </div>
+                    <img src="images/review 3.jpg" alt="Taro & Sakura, Osaka" class="customer-photo">
+                    <h3 class="customer-name">Taro & Sakura, Osaka</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="feedback-controls">
+        <button class="prev-feedback">❮</button>
+        <button class="next-feedback">❯</button>
+    </div>
+</section>
+
+
+
+<section id="faq" class="faq-section">
+    <div class="container">
+        <div class="heading">
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="row">
+            <!-- Chat Prompt -->
+            <div class="col-md-3 chat-prompt">
+                <img src="chat-icon.png" alt="Chat Icon" class="chat-icon">
+                <p class="chat-text">Can't find what you are looking for?<br>We would like to chat with you.</p>
+                <button class="chat-button">Start Live Chat</button>
+            </div>
+
+            <!-- FAQ Content -->
+            <div class="col-md-9 faq-content">
+                <div class="faq-search">
+                    <input type="text" class="faq-search-bar" placeholder="What are you looking for?">
+                </div>
+
+                <div class="faq-container">
+                    <div class="faq active">
+                        <h3 class="faq-tile">
+                            How much does a team subscription cost?
+                          </h3>
+                          <p class="faq-text">
+                            A team subscription costs $299 per month. You can cancel at any.
+                          </p>
+                        <button class="faq-toggle">
+                            <i class="fas fa-plus">&#43;</i>
+                        </button>
+                    </div>
+                    <div class="faq">
+                        <h3 class="faq-tile">
+                            How much does a team subscription cost?
+                          </h3>
+                          <p class="faq-text">
+                            A team subscription costs $299 per month. You can cancel at any.
+                          </p>
+                        <button class="faq-toggle">
+                            <i class="fas fa-plus">&#43;</i>
+                        </button>
+                    </div>
+                    <div class="faq">
+                        <h3 class="faq-tile">
+                            How much does a team subscription cost?
+                          </h3>
+                          <p class="faq-text">
+                            A team subscription costs $299 per month. You can cancel at any.
+                          </p>
+                        <button class="faq-toggle">
+                            <i class="fas fa-plus">&#43;</i>
+                        </button>
+                    </div>
+                    <div class="faq">
+                        <h3 class="faq-tile">
+                            How much does a team subscription cost?
+                          </h3>
+                          <p class="faq-text">
+                            A team subscription costs $299 per month. You can cancel at any.
+                          </p>
+                        <button class="faq-toggle">
+                            <i class="fas fa-plus">&#43;</i>
+                        </button>
+                    </div>
+                    <!-- Repeat for other FAQs -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<footer class="footer-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 footer-about">
+                <h3>About Us</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac ex at risus sagittis tristique.</p>
+            </div>
+            <div class="col-md-4 footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: info@example.com</p>
+                <p>Phone: +123 456 7890</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
 
 
 </body>

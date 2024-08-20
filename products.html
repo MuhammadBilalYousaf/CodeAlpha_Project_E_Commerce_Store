@@ -1,0 +1,288 @@
+<!-- all-products.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products</title>
+    <link rel="stylesheet" href="./css/products.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <style>
+        /* Add your own styles or modify these */
+        .category-slider {
+            display: flex;
+            overflow-x: auto;
+            margin: 20px 0;
+            padding: 10px 0;
+        }
+
+        .category-slider button {
+            flex: 0 0 auto;
+            margin: 0 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+        }
+
+        .category-slider button.active {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .products-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        .product-card {
+            width: calc(33% - 40px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style> -->
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <!-- Logo Section -->
+            <div id="logo">
+                <a href="index.html">
+                    <img src="./images/logo.png" alt="Company Logo">
+                </a>
+            </div>
+
+            <!-- Menu Section -->
+            <div id="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <!-- <form action="search_results.html" method="GET"> -->
+                            <input type="search" name="product_search" id="header_search" placeholder="Search products" aria-label="Search Products">
+                            <div id="searchSuggestions" class="suggestions-box"></div> <!-- Suggestions will appear here -->
+                        <!-- </form> -->
+                    </li>
+                    <button class="menu-toggle"><i class="fa fa-bars"></i></button>
+                </ul>
+            </div>
+
+            <!-- Cart and Sign In Section -->
+            <div id="header_btns">
+                <a href="cart.html">
+                    <img src="./images/cart.png" alt="Shopping Cart">
+                </a>
+                <button class="signIn_btn" aria-label="Sign in">Sign in</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="category-slider">
+            <button class="active" data-category="all">All</button>
+            <button data-category="laptop">Laptops</button>
+            <button data-category="camera">Cameras</button>
+            <button data-category="phone">Phones</button>
+            <button data-category="watch">Watches</button>
+            <button data-category="speaker">Speakers</button>
+            <button data-category="accessories">Accessories</button>
+            <button data-category="sports">Sports</button>
+            <!-- Add more categories as needed -->
+        </div>
+
+        <div class="products-grid" id="productGrid">
+            <!-- Product cards go here -->
+            <div class="product-card" data-category="laptop">
+                <img src="images/laptop.png" alt="MacBook Pro">
+                <h3>MacBook Pro</h3>
+                <p>$399.99</p>
+                <a href="macbook-pro.html" class="cta-button">Add to Cart</a>
+            </div>
+            <div class="product-card" data-category="laptop">
+                <img src="images/laptop.png" alt="MacBook Pro">
+                <h3>MacBook Pro</h3>
+                <p>$399.99</p>
+                <a href="macbook-pro.html" class="cta-button">Add to Cart</a>
+            </div>
+            <div class="product-card" data-category="laptop">
+                <img src="images/laptop.png" alt="MacBook Pro">
+                <h3>MacBook Pro</h3>
+                <p>$399.99</p>
+                <a href="macbook-pro.html" class="cta-button">Add to Cart</a>
+            </div>
+            <div class="product-card" data-category="laptop">
+                <img src="images/laptop.png" alt="MacBook Pro">
+                <h3>MacBook Pro</h3>
+                <p>$399.99</p>
+                <a href="macbook-pro.html" class="cta-button">Add to Cart</a>
+            </div>
+            <div class="product-card" data-category="camera">
+                <img src="images/camera.png" alt="DSLR Camera">
+                <h3>DSLR Camera</h3>
+                <p>$59.99</p>
+                <a href="dslr-camera.html" class="cta-button">Add to Cart</a>
+            </div>
+            <div class="product-card" data-category="phone">
+                <img src="images/iphone.png" alt="Iphone 7 Plus">
+                <h3>Iphone 7 Plus</h3>
+                <p>$99.99</p>
+                <a href="iphone-7-plus.html" class="cta-button">Add to Cart</a>
+            </div>
+            <div class="product-card" data-category="watch">
+                <img src="./images/smart watch.png" alt="Smart Watch">
+                <h3>Smart Watch</h3>
+                <p>$49.99</p>
+                <a href="smart-watch.html" class="cta-button">Add to Cart</a>
+            </div>
+            <div class="product-card" data-category="speaker">
+                <img src="images/speaker.png" alt="JBL Portable Speaker">
+                <h3>JBL Portable Speaker</h3>
+                <p>$59.99</p>
+                <a href="jbl-portable-speaker.html" class="cta-button">Add to Cart</a>
+            </div>
+            <div class="product-card" data-category="accessories">
+                <img src="images/earpods.png" alt="Earpods">
+                <h3>Earpods</h3>
+                <p>$34.99</p>
+                <a href="earpods.html" class="cta-button">Add to Cart</a>
+            </div>
+            <div class="product-card" data-category="accessories">
+                <img src="images/headphone.png" alt="Headphone">
+                <h3>Headphone</h3>
+                <p>$34.99</p>
+                <a href="headphone.html" class="cta-button">Add to Cart</a>
+            </div>
+            <div class="product-card" data-category="sports">
+                <img src="./images/sports shoes.png" alt="Sports Shoes">
+                <h3>Sports Shoes</h3>
+                <p>$109.99</p>
+                <a href="sports-shoes.html" class="cta-button">Add to Cart</a>
+            </div>
+            <!-- Add more product cards as needed -->
+        </div>
+    </main>
+
+
+     
+<section id="faq" class="faq-section">
+    <div class="container">
+        <div class="heading">
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="row">
+            <!-- Chat Prompt -->
+            <div class="col-md-3 chat-prompt">
+                <img src="chat-icon.png" alt="Chat Icon" class="chat-icon">
+                <p class="chat-text">Can't find what you are looking for?<br>We would like to chat with you.</p>
+                <button class="chat-button">Start Live Chat</button>
+            </div>
+
+            <!-- FAQ Content -->
+            <div class="col-md-9 faq-content">
+                <div class="faq-search">
+                    <input type="text" class="faq-search-bar" placeholder="What are you looking for?">
+                </div>
+
+                <div class="faq-container">
+                    <div class="faq active">
+                        <h3 class="faq-tile">
+                            How much does a team subscription cost?
+                          </h3>
+                          <p class="faq-text">
+                            A team subscription costs $299 per month. You can cancel at any.
+                          </p>
+                        <button class="faq-toggle">
+                            <i class="fas fa-plus">&#43;</i>
+                        </button>
+                    </div>
+                    <div class="faq">
+                        <h3 class="faq-tile">
+                            How much does a team subscription cost?
+                          </h3>
+                          <p class="faq-text">
+                            A team subscription costs $299 per month. You can cancel at any.
+                          </p>
+                        <button class="faq-toggle">
+                            <i class="fas fa-plus">&#43;</i>
+                        </button>
+                    </div>
+                    <div class="faq">
+                        <h3 class="faq-tile">
+                            How much does a team subscription cost?
+                          </h3>
+                          <p class="faq-text">
+                            A team subscription costs $299 per month. You can cancel at any.
+                          </p>
+                        <button class="faq-toggle">
+                            <i class="fas fa-plus">&#43;</i>
+                        </button>
+                    </div>
+                    <div class="faq">
+                        <h3 class="faq-tile">
+                            How much does a team subscription cost?
+                          </h3>
+                          <p class="faq-text">
+                            A team subscription costs $299 per month. You can cancel at any.
+                          </p>
+                        <button class="faq-toggle">
+                            <i class="fas fa-plus">&#43;</i>
+                        </button>
+                    </div>
+                    <!-- Repeat for other FAQs -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-about">
+                    <h3>About Us</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac ex at risus sagittis tristique.</p>
+                </div>
+                <div class="col-md-4 footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@example.com</p>
+                    <p>Phone: +123 456 7890</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Your Company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/products.js"></script>
+</body>
+</html>
