@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order</title>
+    <link rel="stylesheet" href="./css/trackorder.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <!-- Logo Section -->
+            <div id="logo">
+                <a href="index.html">
+                    <img src="./images/logo.png" alt="Company Logo">
+                </a>
+            </div>
+
+            <!-- Menu Section -->
+            <div id="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="trackorder.html">Track Order</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <!-- <form action="search_results.html" method="GET"> -->
+                            <input type="search" name="product_search" id="header_search" placeholder="Search products" aria-label="Search Products">
+                            <div id="searchSuggestions" class="suggestions-box"></div> <!-- Suggestions will appear here -->
+                        <!-- </form> -->
+                    </li>
+                    <button class="menu-toggle"><i class="fa fa-bars"></i></button>
+                </ul>
+            </div>
+
+            <!-- Cart and Sign In Section -->
+            <div id="header_btns">
+                <a href="cart.html">
+                    <img src="./images/cart.png" alt="Shopping Cart">
+                </a>
+                <button class="signIn_btn" aria-label="Sign in">Sign in</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="track-order-container">
+        <h1>Track Your Order</h1>
+        <p>Enter your order number below to track the status of your order.</p>
+        <form id="trackOrderForm">
+            <input type="text" id="orderNumber" placeholder="Enter your order number" required>
+            <button type="submit">Track Order</button>
+        </form>
+        <div id="orderStatus"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+    </footer>
+
+    <script src="./js/trackorder.js"></script>
+</body>
+</html>

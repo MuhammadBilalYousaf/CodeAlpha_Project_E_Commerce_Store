@@ -30,6 +30,35 @@ toggleMenu();
         });
     });
 
+function toggleMenu() {
+    if (window.innerWidth <= 480) {
+        menuToggle.style.display = 'block';
+        menuItems.forEach(item => {
+            item.style.display = 'none'; // Hide menu items initially
+        });
+    } else {
+        menuToggle.style.display = 'none';
+        menuItems.forEach(item => {
+            item.style.display = 'block'; // Show menu items on larger screens
+        });
+    }
+}
+
+toggleMenu();
+
+    // Check on window resize
+    window.addEventListener('resize', toggleMenu);
+
+    menuToggle.addEventListener('click', () => {
+        menuItems.forEach(item => {
+            if (item.style.display === 'block') {
+                item.style.display = 'none';
+            } else {
+                item.style.display = 'block';
+            }
+        });
+    });
+
     
 
 document.addEventListener('DOMContentLoaded', function() {

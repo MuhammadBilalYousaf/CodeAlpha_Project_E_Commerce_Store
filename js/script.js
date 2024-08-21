@@ -240,3 +240,74 @@ document.addEventListener('DOMContentLoaded', () => {
 //         }
 //     });
 // });
+
+
+
+// add to cart fun 
+document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.cta-button');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function (event) {
+            event.preventDefault();
+            const productCard = this.closest('.product-card');
+            const product = {
+                name: productCard.querySelector('h3').textContent,
+                price: parseFloat(productCard.querySelector('p').textContent.replace('$', '')),
+                image: productCard.querySelector('img').src,
+                quantity: 1
+            };
+
+            addToCart(product);
+        });
+    });
+
+    function addToCart(product) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const existingProductIndex = cart.findIndex(item => item.name === product.name);
+
+        if (existingProductIndex > -1) {
+            cart[existingProductIndex].quantity += 1;
+        } else {
+            cart.push(product);
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${product.name} has been added to your cart.`);
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const seeMoreButton = document.querySelector('#seeMoreButton');
+    if (seeMoreButton) {
+        seeMoreButton.addEventListener('click', function(event) {
+            // Prevent the default anchor behavior
+            event.preventDefault();
+            
+            // Navigate to products.html
+            window.location.href = 'products.html';
+        });
+    } else {
+        console.error('See More button not found');
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const seeMoreButtons = document.querySelectorAll('.banner_see_more');
+    
+    if (seeMoreButtons.length > 0) {
+        seeMoreButtons.forEach(button => {
+            button.addEventListener('click', function(event) {
+                // Prevent the default anchor behavior
+                event.preventDefault();
+                
+                // Navigate to products.html
+                window.location.href = 'products.html';
+            });
+        });
+    } else {
+        console.error('See More buttons not found');
+    }
+});
